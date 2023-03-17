@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main - prints all possible different combinations of two digits in ascending order
  * Return: ALways 0 (Success)
