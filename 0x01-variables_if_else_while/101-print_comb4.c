@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible unique combinations of three digits  
+ * main - entry point 
  * Return: Always 0 (Success)
  */
 int main(void)
