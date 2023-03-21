@@ -1,23 +1,20 @@
 #include "main.h"
+
 /**
- * main - entry point for main func
- * Return: int 0 if success
+ * print_alphabet - Entry point
+ * Return:0
  */
+
 void print_alphabet(void)
 {
- char d = 'a';
- while(d <= 'z')
- {
-   _putchar(d);
-   d++;
- }
- _putchar('/n');
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		_putchar(c);
+		c++;
+
+	}
+	_putchar('\n');
 
 }
-  
-int main(void)
-{
-	print_alphabet();
-	return(0);
-}
-
