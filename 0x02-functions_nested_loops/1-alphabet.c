@@ -12,11 +12,11 @@ void print_alphabet(void)
    _putchar(letter);
    letter++;
  }; 
-};
+}
   
 int main(void)
 {
 	print_alphabet();
-	_putchar("/n");
+	_putchar('/n');
 	return(0);
 }
