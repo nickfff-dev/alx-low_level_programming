@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * main - entry point for this boy
+ *
+ * Return - int
  */
 int main(void)
 {
