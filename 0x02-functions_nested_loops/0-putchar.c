@@ -2,7 +2,7 @@
 /**
  * main - entry point for this boy
  *
- * Return - int
+ * Return: an int whose value is 0
  */
 int main(void)
 {
