@@ -1,5 +1,4 @@
-#include <stlib.h>
-#include <stdio.h>
+#include "main.h"
 /**
  * _isupper - checks case of a character
  * @c: the varibale to be checked
