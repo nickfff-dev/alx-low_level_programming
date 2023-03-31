@@ -7,6 +7,7 @@
 void print_number(int x)
 {
 	unsigned int b;
+
 	if (x < 0)
 	{
 		b = -x;
