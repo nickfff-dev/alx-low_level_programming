@@ -1,5 +1,5 @@
+#include "main.j"
 #include <stdio.h>
-#include "main.h"
 
 /**
  * print_diagnums - sum of the two diagonals of a square matrix of integers
