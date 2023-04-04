@@ -18,7 +18,7 @@ unsigned int _strspn(char *s, char *accept)
 		x = 0;
 		for (y = 0; y < 7; y++)
 		{
-			if (*(accept + y) == *(s + i))
+			if (*(s + i) == *(accept + y))
 			{
 				count++;
 				x = 1;
@@ -29,4 +29,5 @@ unsigned int _strspn(char *s, char *accept)
 			return (count);
 		}
 	}
+	return(0);
 }
