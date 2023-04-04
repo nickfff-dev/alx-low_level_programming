@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * strpbrk - first occurence of  a string
+ * strpbrk- first occurence of  a string
  * @s: string to check
  * @accept: string to find
  * Return: pointer or null
@@ -13,7 +13,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (g = 0; accept[g] != '\0'; g++)
 		{
-			ff (*s == accept[g])
+			if (*s == accept[g])
 			{
 				return (s);
 			}
