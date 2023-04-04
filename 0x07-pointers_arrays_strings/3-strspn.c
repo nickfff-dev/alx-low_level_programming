@@ -7,18 +7,16 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	int i,x,y;
 	unsigned int count;
-	int x;
-	int y;
 
 	count = 0;
 	for (i = 0; *(s + i) != 0; i++)
 	{
 		x = 0;
-		for (y = 0; y < 6; y++)
+		for (y = 0; *(accept + y) != 0; y++)
 		{
-			if (*(s + i) == accept[y])
+			if (*(s + i) == *(accept + y))
 			{
 				count++;
 				x = 1;
@@ -26,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (x == 0)
 		{
-			return (count - 1);
+			return (count);
 		}
 	}
 	return (0);
