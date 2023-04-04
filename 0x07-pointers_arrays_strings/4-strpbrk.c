@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * _strbbrk - firts occurence of  a string
+ * strpbrk - first occurence of  a string
  * @s: string to check
  * @accept: string to find
+ * Return: pointer or null
  */
 char *_strpbrk(char *s, char *accept)
 {
