@@ -7,7 +7,7 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i,x,y;
+	int i, x, y;
 	unsigned int count;
 
 	count = 0;
