@@ -6,7 +6,7 @@
  * @accept: string to find
  * Return: pointer or null
  */
-char * _strpbrk(char *s, char *acciept)
+char *_strpbrk(char *s, char *accept)
 {
 	int f, g;
 
