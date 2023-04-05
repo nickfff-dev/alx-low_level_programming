@@ -1,4 +1,9 @@
-#include "main.hi"
+#include "main.h"
+/**
+ * _puts_recursion - prints chracters of string
+ * @s: the string of chracters
+ * Return: void
+ */
 
 void _puts_recursion(char *s)
 {
