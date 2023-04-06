@@ -13,7 +13,7 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (_base_sqr(n,0));
+	return (_base_sqr(n, 0));
 }
 /**
  * _base_sqr - helper function to recurse from 0 to n
@@ -25,11 +25,11 @@ int _sqrt_recursion(int n)
 int _base_sqr(int n, int x)
 {
 	/* the base condition */
-	if ( x * x > n)
+	if (x * x > n)
 	{
 		return (-1);
 	}
-	if ( x * x == n)
+	if (x * x == n)
 	{
 		return (x);
 	}
