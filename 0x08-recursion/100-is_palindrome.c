@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 /**
  * _check_strln - returns length of strng
  * @s: the string to count
- * Return - int 
+ * Return: - int
  */
 
 int _check_strln(char *s)
@@ -48,7 +48,7 @@ int _run_palindrom(char *s, int x, int y)
 	}
 	if (x >= y)
 	{
-		return(1);
+		return (1);
 	}
 	return (_run_palindrom(s, x + 1, y - 1));
 }
