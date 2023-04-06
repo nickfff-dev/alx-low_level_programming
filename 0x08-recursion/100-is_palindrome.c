@@ -33,7 +33,7 @@ int _check_strln(char *s)
 }
 
 /**
- * _run_palindrom_-  recursive palindrom string test
+ * _run_palindrom -  recursive palindrom string test
  * @s: the stringg to test
  * @x: the number to start counting from
  * @y: length of the string
