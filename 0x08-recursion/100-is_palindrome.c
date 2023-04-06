@@ -50,5 +50,5 @@ int _run_palindrom(char *s, int x, int y)
 	{
 		return(1);
 	}
-	return (_run_palindrome(s, x + 1, y - 1));
+	return (_run_palindrom(s, x + 1, y - 1));
 }
