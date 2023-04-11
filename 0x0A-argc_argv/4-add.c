@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include "main.h"
 
 /**
- * main - adds numbers 
+ * main - adds numbers
  * @argc: arg count
  * @argv: array of arg pointer
  * Return: 0  or 1
@@ -12,18 +11,26 @@
 
 int main(int argc, char **argv)
 {
-	int sum;
+	int sum i, fnum;
 
-	if (argc <= 1)
+	sum = 0;
+
+	if (argc > 1)
 	{
-		printf("%d\n", 0);
+		for (i = 1; i < argc; i++)
+		{
+			if (argv[i] > '9' || argv[i] < '0')
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
+			fnum = atoi(argv[i]);
+			if (fnum >= 0)
+			{
+				sum += fnum;
+			}
+		}
 	}
-	if (isdigit(argv[1]) == 0 || isdigit(argv[2]) == 0)
-	{
-		printf("%s\n", "Error");
-		return (1);
-	}
-	sum = atoi(argv[1]) + atoi(argv[2]);
 	printf("%d\n", sum);
 	return (0);
 }
