@@ -30,7 +30,10 @@ int main(int argc, char **argv)
 				sum += fnum;
 			}
 		}
+		printf("%d\n", sum);
+	} else 
+	{
+		printf("0\n");
 	}
-	printf("%d\n", sum);
 	return (0);
 }
