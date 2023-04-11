@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (*(argv[i]) > '9' || *(argv[i]) < '0')
+			if (argv[i] > '9' || argv[i] < '0')
 			{
 				printf("%s\n", "Error");
 				return (1);
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 			}
 		}
 		printf("%d\n", sum);
-	} else 
+	} else
 	{
 		printf("0\n");
 	}
