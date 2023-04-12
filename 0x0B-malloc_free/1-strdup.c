@@ -16,8 +16,17 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	num = sizeof(str);
-	y = (char *)malloc(num * sizeof(char));
+	num = 0;
+	while (str[num])
+	{
+		num++;
+	}
+	y = (char *)malloc((num + 1) * sizeof(char));
+
+	if (y == NULL)
+	{
+		return (NULL);
+	}
 
 	while (num--)
 	{
