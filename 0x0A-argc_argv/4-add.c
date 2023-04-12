@@ -9,31 +9,33 @@
  * Return: 0  or 1
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int sum, i, fnum;
+	int sum, num, i, j, k;
 
 	sum = 0;
 
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (*(argv[i]) > '9' || *(argv[i]) < '0')
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
 				printf("%s\n", "Error");
 				return (1);
 			}
-			fnum = atoi(argv[i]);
-			if (fnum >= 0)
-			{
-				sum += fnum;
-			}
 		}
-		printf("%d\n", sum);
-	} else
-	{
-		printf("%d\n", 0);
 	}
+
+	for (k = 1; k < argc; k++)
+	{
+		num = atoi(argv[k]);
+		if (num >= 0)
+		{
+			sum += num;
+		}
+	}
+
+	printf("%d\n", sum);
 	return (0);
 }
