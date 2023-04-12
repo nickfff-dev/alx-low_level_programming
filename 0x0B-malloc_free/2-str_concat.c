@@ -7,7 +7,7 @@
 * @s2: the second string
 * Return: the pointeror NULL
 */
-char *str_concat (char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	int reslen;
 	char *res;
@@ -41,5 +41,5 @@ char *str_concat (char *s1, char *s2)
 		count++;
 	}
 	res[reslen] = '\0';
-	return(res);
+	return (res);
 }
