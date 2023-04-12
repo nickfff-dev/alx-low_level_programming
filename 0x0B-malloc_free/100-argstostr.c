@@ -1,49 +1,49 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  *argstostr - string of all arguments concatenated with new line.
-  *@ac: number of arguments.
-  *@av: array of arguments.
-  *Return: NULL if the number of arguments is 0
+  *argstostr - joins all arguments of program.
+  *@ac: argument count.
+  *@av: pointer to array of arguments.
+  *Return: NULL if ac == 0 pointer to new string or NULL if it fails.
   */
 char *argstostr(int ac, char **av)
 {
-	int x, y, z, num;
+	int i, j, k, num;
 	char *res;
 
 	num = 0;
-	z = 0;
+	k = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	x = 0;
-	while (x < ac)
+	i = 0;
+	while (i < ac)
 	{
-		y = 0;
-		while (av[x][y])
+		j = 0;
+		while (av[i][j])
 		{
 			num++;
-			y++;
+			j++;
 		}
 		num++;
-		x++;
+		i++;
 	}
 	res = malloc((sizeof(char) * num) + 1);
 	if (res == NULL)
 		return (NULL);
-	x = 0;
-	while (x < ac)
+	i = 0;
+	while (i < ac)
 	{
-		y = 0;
-		while (av[x][x])
+		j = 0;
+		while (av[i][j])
 		{
-			res[z] = av[x][y];
-			y++;
-			z++;
+			res[k] = av[i][j];
+			j++;
+			k++;
 		}
-		res[z] = '\n';
-		z++;
-		x++;
+		res[k] = '\n';
+		k++;
+		i++;
 	}
-	res[z] = '\0';
+	res[k] = '\0';
 	return (res);
 }
