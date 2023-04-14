@@ -1,1 +1,1 @@
-more malloc functions
+more malloc functions like calloc
