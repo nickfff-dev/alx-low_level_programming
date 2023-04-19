@@ -9,7 +9,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int num1, num2, outcome;
+	int num1, num2, res;
 	char o;
 	int (*func)(int, int);
 
@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	o = *argv[2];
-	if ((o == ' / ' || o == '%') && num2 == 0)
+	if ((o == '/' || o == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	outcome = func(num1, num2);
-	printf("%d\n", outcome);
+	res = func(num1, num2);
+	printf("%d\n", res);
 	return (0);
 }
