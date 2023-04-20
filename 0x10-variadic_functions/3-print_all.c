@@ -9,6 +9,7 @@ void print_all(const char * const format, ...)
 {
 	int x = 0;
 	char *word, *separator = "";
+
 	va_list arr;
 
 	va_start(arr, format);
@@ -21,7 +22,7 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%s%c", separator, va_arg(arr, int));
 				break;
-			case 'x':
+			case 'i':
 				printf("%s%d", separator, va_arg(arr, int));
 				break;
 			case 'f':
