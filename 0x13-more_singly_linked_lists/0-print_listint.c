@@ -9,7 +9,7 @@
 
 size_t print_listint(const listint_t *h)
 {
-	listint_t *ptr = head;
+	listint_t *ptr = h;
 	int count = 0;
 
 	while (ptr != NULL)
