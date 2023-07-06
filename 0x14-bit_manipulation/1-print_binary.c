@@ -9,7 +9,8 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int displayBitMask;
-	int c, k;
+	int c = 0;
+	int k = 0;
 
 	if (n == 0)
 	{
@@ -32,5 +33,3 @@ void print_binary(unsigned long int n)
 		}
 	}
 }
-
-
