@@ -9,7 +9,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int displayBitMask;
-	int c;
+	int c, k;
 
 	if (n == 0)
 	{
@@ -21,7 +21,15 @@ void print_binary(unsigned long int n)
 	{
 		displayBitMask = 1 << c;
 
-		_putchar(n & displayBitMask ? '1' : '0');
+		if (n & displayBitMask)
+		{
+			k = 1;
+			_putchar('1');
+		}
+		else if (k == 1)
+		{
+			_putchar('0');
+		}
 	}
 }
 
