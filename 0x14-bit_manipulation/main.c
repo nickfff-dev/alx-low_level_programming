@@ -2,18 +2,22 @@
 #include "main.h"
 
 /**
-  * main - The entry point of the program
-  * Return: int .
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	int n;
+    unsigned long int n;
 
-	n = get_bit(1024, 10);
-	printf("%d\n", n);
-	n = get_bit(98, 1);
-	printf("%d\n", n);
-	n = get_bit(1024, 0);
-	printf("%d\n", n);
-	return (0);
+    n = 1024;
+    set_bit(&n, 5);
+    printf("%lu\n", n);
+    n = 0;
+    set_bit(&n, 10);
+    printf("%lu\n", n);
+    n = 98;
+    set_bit(&n, 0);
+    printf("%lu\n", n);
+    return (0);
 }
