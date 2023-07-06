@@ -8,7 +8,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int displayBitMask;
+	unsigned long int displayBitMask;
 	int c = 0;
 	int k = 0;
 
@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (c = 31; c >= 0; c--)
+	for (c = ((sizeof(int) * 8) - 1); c >= 0; c--)
 	{
 		displayBitMask = 1 << c;
 
