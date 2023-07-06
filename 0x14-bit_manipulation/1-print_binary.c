@@ -18,11 +18,11 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (c = ((sizeof(int) * 8) - 1); c >= 0; c--)
+	for (c = ((sizeof(unsigned long int) * 8) - 1); c >= 0; c--)
 	{
-		displayBitMask = 1 << c;
+		displayBitMask = n >> c;
 
-		if (n & displayBitMask)
+		if (displayBitMask & 1)
 		{
 			k = 1;
 			_putchar('1');
