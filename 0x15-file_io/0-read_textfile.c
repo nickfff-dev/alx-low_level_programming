@@ -27,27 +27,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	s = read(fd, c, letters);
-	if (s <= 0)
+	if (s == -1)
 	{
-		free(c);
 		return (0);
 
 	}
 	w = write(STDOUT_FILENO, c, s);
-
-	if (w <= 0)
+	if (w == -1 || w != s)
 	{
-		free(c);
 		return (0);
 	}
 
-	if (w != s)
-	{
-		free(c);
-		return (0);
-	}
-
-
+	free(c);
 	close(fd);
 	return (s);
 }
