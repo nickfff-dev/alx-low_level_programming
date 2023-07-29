@@ -146,8 +146,23 @@ void print_osabi(Elf64_Ehdr header)
 	case ELFOSABI_LINUX:
 		printf("UNIX - Linux\n");
 		break;
+	case ELFOSABI_SOLARIS:
+		printf("UNIX - Solaris\n");
+		break;
+	case ELFOSABI_IRIX:
+		printf("UNIX - IRIX\n");
+		break;
+	case ELFOSABI_TRU64:
+		printf("UNIX - TRU64\n");
+		break;
+	case ELFOSABI_ARM:
+		printf("ARM\n");
+		break;
+	case ELFOSABI_STANDALONE:
+		printf("Standalone App\n");
+		break;
 	default:
-		printf("Unknown\n");
+		printf("<unknown: %x>\n", header.e_ident[EI_OSABI]);
 		break;
 	}
 }
