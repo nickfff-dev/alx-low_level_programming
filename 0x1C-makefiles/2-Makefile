@@ -1,10 +1,11 @@
 CC = gcc
-SRC = main.c school.c
+SRC = $(wildcard *.c)
+OBJ = $(patsubst %.c,%.o,$(SRC))
 NAME = school
 
 all: $(NAME)
 
-$(NAME): $(SRC:.c=.o)
+$(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
 %.o: %.c
@@ -13,4 +14,4 @@ $(NAME): $(SRC:.c=.o)
 .PHONY: clean
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ) $(NAME)
